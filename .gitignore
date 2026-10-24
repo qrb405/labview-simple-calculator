@@ -1,0 +1,20 @@
+# LabVIEW per-machine state and caches
+*.lvlps
+*.lck
+*.bak
+*.tmp
+*.llpcache
+/.lvuser
+/虚拟计算器.aliases
+
+# Local tooling and credentials
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+tmp/
+Thumbs.db
+Desktop.ini
+~$*

@@ -1,0 +1,163 @@
+[
+  {
+    "time": "2026-10-24T19:37:31+08:00",
+    "case": "初始化",
+    "expected": {
+      "过程显示": "",
+      "输入临时值": "",
+      "输入1": "",
+      "输入2": "",
+      "运算符临时值": "",
+      "运算结果": ""
+    },
+    "actual": {
+      "过程显示": "",
+      "输入临时值": "",
+      "输入1": "",
+      "输入2": "",
+      "运算符临时值": "",
+      "运算结果": ""
+    },
+    "passed": true,
+    "vi_sha256": "d2fe7f282bead8623d7e9e66bd4eb04f6b2a082c6b1db4db8eaca4994d0501c5",
+    "method": "real front-panel button input followed by VI Server control-value readback"
+  },
+  {
+    "time": "2026-10-24T19:38:05+08:00",
+    "case": "18+7",
+    "expected": {
+      "过程显示": "18+7=\n25.000000",
+      "输入临时值": "7",
+      "输入1": "18",
+      "输入2": "7",
+      "运算符临时值": "+",
+      "运算结果": "25.000000"
+    },
+    "actual": {
+      "过程显示": "18+7=\n25.000000",
+      "输入临时值": "7",
+      "输入1": "18",
+      "输入2": "7",
+      "运算符临时值": "+",
+      "运算结果": "25.000000"
+    },
+    "passed": true,
+    "vi_sha256": "d2fe7f282bead8623d7e9e66bd4eb04f6b2a082c6b1db4db8eaca4994d0501c5",
+    "method": "real front-panel button input followed by VI Server control-value readback"
+  },
+  {
+    "time": "2026-10-24T19:38:10+08:00",
+    "case": "C",
+    "expected": {
+      "过程显示": "",
+      "输入临时值": "",
+      "输入1": "",
+      "输入2": "",
+      "运算符临时值": "",
+      "运算结果": ""
+    },
+    "actual": {
+      "过程显示": "",
+      "输入临时值": "",
+      "输入1": "",
+      "输入2": "",
+      "运算符临时值": "",
+      "运算结果": ""
+    },
+    "passed": true,
+    "vi_sha256": "d2fe7f282bead8623d7e9e66bd4eb04f6b2a082c6b1db4db8eaca4994d0501c5",
+    "method": "real front-panel button input followed by VI Server control-value readback"
+  },
+  {
+    "time": "2026-10-24T19:38:34+08:00",
+    "case": "6-14",
+    "expected": {
+      "过程显示": "6-14=\n-8.000000",
+      "输入临时值": "14",
+      "输入1": "6",
+      "输入2": "14",
+      "运算符临时值": "-",
+      "运算结果": "-8.000000"
+    },
+    "actual": {
+      "过程显示": "6-14=\n-8.000000",
+      "输入临时值": "14",
+      "输入1": "6",
+      "输入2": "14",
+      "运算符临时值": "-",
+      "运算结果": "-8.000000"
+    },
+    "passed": true,
+    "vi_sha256": "d2fe7f282bead8623d7e9e66bd4eb04f6b2a082c6b1db4db8eaca4994d0501c5",
+    "method": "real front-panel button input followed by VI Server control-value readback"
+  },
+  {
+    "time": "2026-10-24T19:39:21+08:00",
+    "case": "12.5*3.2",
+    "expected": {
+      "过程显示": "12.5*3.2=\n40.000000",
+      "输入临时值": "3.2",
+      "输入1": "12.5",
+      "输入2": "3.2",
+      "运算符临时值": "*",
+      "运算结果": "40.000000"
+    },
+    "actual": {
+      "过程显示": "12.5*3.2=\n40.000000",
+      "输入临时值": "3.2",
+      "输入1": "12.5",
+      "输入2": "3.2",
+      "运算符临时值": "*",
+      "运算结果": "40.000000"
+    },
+    "passed": true,
+    "vi_sha256": "d2fe7f282bead8623d7e9e66bd4eb04f6b2a082c6b1db4db8eaca4994d0501c5",
+    "method": "real front-panel button input followed by VI Server control-value readback"
+  },
+  {
+    "time": "2026-10-24T19:39:52+08:00",
+    "case": "22/8",
+    "expected": {
+      "过程显示": "22/8=\n2.750000",
+      "输入临时值": "8",
+      "输入1": "22",
+      "输入2": "8",
+      "运算符临时值": "/",
+      "运算结果": "2.750000"
+    },
+    "actual": {
+      "过程显示": "22/8=\n2.750000",
+      "输入临时值": "8",
+      "输入1": "22",
+      "输入2": "8",
+      "运算符临时值": "/",
+      "运算结果": "2.750000"
+    },
+    "passed": true,
+    "vi_sha256": "d2fe7f282bead8623d7e9e66bd4eb04f6b2a082c6b1db4db8eaca4994d0501c5",
+    "method": "real front-panel button input followed by VI Server control-value readback"
+  },
+  {
+    "time": "2026-10-24T19:39:58+08:00",
+    "case": "C",
+    "expected": {
+      "过程显示": "",
+      "输入临时值": "",
+      "输入1": "",
+      "输入2": "",
+      "运算符临时值": "",
+      "运算结果": ""
+    },
+    "actual": {
+      "过程显示": "",
+      "输入临时值": "",
+      "输入1": "",
+      "输入2": "",
+      "运算符临时值": "",
+      "运算结果": ""
+    },
+    "passed": true,
+    "vi_sha256": "d2fe7f282bead8623d7e9e66bd4eb04f6b2a082c6b1db4db8eaca4994d0501c5",
+    "method": "real front-panel button input followed by VI Server control-value readback"
+  }
+]

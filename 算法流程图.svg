@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1120" viewBox="0 0 1200 1120">
+ <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#222"/></marker></defs>
+ <rect width="1200" height="1120" fill="white"/>
+ <g font-family="Microsoft YaHei,SimSun,sans-serif" fill="#111" font-size="24" text-anchor="middle">
+  <g fill="white" stroke="#222" stroke-width="2">
+   <rect x="500" y="15" width="200" height="55" rx="27"/>
+   <rect x="395" y="105" width="410" height="80"/>
+   <rect x="420" y="225" width="360" height="65"/>
+   <path d="M600,325 L770,375 L600,425 L430,375 Z"/>
+   <rect x="20" y="495" width="270" height="130"/>
+   <rect x="315" y="495" width="270" height="175"/>
+   <rect x="610" y="495" width="270" height="110"/>
+   <rect x="905" y="495" width="270" height="110"/>
+   <path d="M745,645 L875,700 L745,755 L615,700 Z"/>
+   <rect x="610" y="795" width="270" height="80"/>
+   <rect x="610" y="915" width="270" height="100"/>
+  </g>
+  <g fill="none" stroke="#222" stroke-width="2" marker-end="url(#a)">
+   <path d="M600,70 V105"/><path d="M600,185 V225"/><path d="M600,290 V325"/>
+   <path d="M430,375 H155 V440 M155,480 V495"/><path d="M540,408 V440 H450 M450,480 V495"/>
+   <path d="M660,408 V440 H745 M745,480 V495"/><path d="M770,375 H1040 V440 M1040,480 V495"/>
+   <path d="M745,605 V645"/><path d="M745,755 V795"/><path d="M745,875 V915"/>
+   <path d="M155,625 V1050 H1190 V257 H780"/>
+   <path d="M450,670 V1050"/><path d="M745,1015 V1050"/><path d="M1040,605 V1050"/>
+  </g>
+  <text x="600" y="52">开始</text>
+  <text x="600" y="137">初始化</text><text x="600" y="169">六个字符串显示控件置空</text>
+  <text x="600" y="267">While 循环内等待按键事件</text>
+  <text x="600" y="384">按键类别判断</text>
+  <g style="paint-order:stroke;stroke:white;stroke-width:12;stroke-linejoin:round">
+   <text x="155" y="472">数字 0-9 或小数点</text>
+   <text x="450" y="472">运算符 + - * /</text>
+   <text x="745" y="472">等号 =</text><text x="1040" y="472">清除 C</text>
+  </g>
+  <text x="155" y="531">读取按键布尔文本</text><text x="155" y="567">追加到输入临时值</text><text x="155" y="603">同时追加到过程显示</text>
+  <text x="450" y="532">输入临时值存入输入1</text><text x="450" y="569">然后清空输入临时值</text><text x="450" y="607">保存到运算符临时值</text><text x="450" y="645">把运算符追加到显示</text>
+  <text x="745" y="531">输入临时值存入输入2</text><text x="745" y="577">输入1和输入2转为数值</text>
+  <text x="1040" y="536">六个字符串控件置空</text><text x="1040" y="577">恢复初始状态</text>
+  <text x="745" y="695">判断运算符</text><text x="745" y="726">+ - * /</text>
+  <text x="745" y="827">+ 加  - 减  * 乘  / 除</text><text x="745" y="861">执行对应条件分支</text>
+  <text x="745" y="950">结果转字符串并保存</text><text x="745" y="986">显示算式 + 等号 + 结果</text>
+  <text x="600" y="1094">处理完成后返回等待下一次按键  C 不结束程序</text>
+ </g>
+</svg>

@@ -1,0 +1,16 @@
+* text=auto
+*.vi binary
+*.exe binary
+*.docx binary
+*.pdf binary
+*.png binary
+*.svg text eol=lf
+*.aixml text eol=lf
+*.lvproj text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.ini -text
+*.html -text
+*.aliases -text
+LICENSE_* -text

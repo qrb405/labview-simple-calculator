@@ -1,0 +1,9 @@
+{
+  "case": "22/8",
+  "expected": "2.750000",
+  "observed_process_display": "22/8=\n2.750000",
+  "passed": true,
+  "method": "real EXE button input and visual screenshot verification",
+  "screenshot": "exe_new_sample_division.png",
+  "time": "2026-10-24T11:40:43.614Z"
+}

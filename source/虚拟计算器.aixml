@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='utf-8'?>
+<VI _name="虚拟计算器.vi" description="实验1 简易计算器设计。按课程指导书建立六个字符串显示控件、初始化、While循环及数字、运算符、等号、清除值改变事件。四则运算条件结构直接位于等号事件内。">
+  <Constant type="string" value="" uid="101" uid_parent="root" outputs="value:101.value" />
+  <Indicator _name="过程显示" type="string" value="" inputs="value:101.value" uid="102" uid_parent="root" />
+  <Constant type="string" value="" uid="103" uid_parent="root" outputs="value:103.value" />
+  <Indicator _name="输入临时值" type="string" value="" inputs="value:103.value" uid="104" uid_parent="root" />
+  <Constant type="string" value="" uid="105" uid_parent="root" outputs="value:105.value" />
+  <Indicator _name="输入1" type="string" value="" inputs="value:105.value" uid="106" uid_parent="root" />
+  <Constant type="string" value="" uid="107" uid_parent="root" outputs="value:107.value" />
+  <Indicator _name="输入2" type="string" value="" inputs="value:107.value" uid="108" uid_parent="root" />
+  <Constant type="string" value="" uid="109" uid_parent="root" outputs="value:109.value" />
+  <Indicator _name="运算符临时值" type="string" value="" inputs="value:109.value" uid="110" uid_parent="root" />
+  <Constant type="string" value="" uid="111" uid_parent="root" outputs="value:111.value" />
+  <Indicator _name="运算结果" type="string" value="" inputs="value:111.value" uid="112" uid_parent="root" />
+  <Structure _name="While Loop" count="" uid="113" uid_parent="root">
+    <Structure _name="Event Structure" uid="114" uid_parent="113">
+      <CaseFrame selector=" Timeout " uid="115" uid_parent="114" />
+      <CaseFrame selector=" &quot;数字1&quot;, &quot;数字2&quot;, &quot;数字3&quot;, &quot;数字4&quot;, &quot;数字5&quot;, &quot;数字6&quot;, &quot;数字7&quot;, &quot;数字8&quot;, &quot;数字9&quot;, &quot;数字0&quot;, &quot;小数点&quot;\3A Value Change " uid="116" uid_parent="114">
+        <Node _name="Event Data Node" fields="CtlRef" uid="117" uid_parent="116" outputs="CtlRef:117.CtlRef" />
+        <Node _name="Property Node" fields="read+Boolean Text.Text" type="{LV.Boolean}" inputs="reference:117.CtlRef" uid="118" uid_parent="116" outputs="Boolean Text.Text:118.text" />
+        <Node _name="Property Node" fields="read+Value" link="输入临时值" type="{LV.String}" uid="119" uid_parent="116" outputs="Value:119.value,error out:119.error" />
+        <Node _name="Property Node" fields="read+Value" link="过程显示" type="{LV.String}" uid="120" uid_parent="116" outputs="Value:120.value,error out:120.error" />
+        <Node _name="Concatenate Strings" inputs="string:119.value,string#1:118.text" uid="121" uid_parent="116" outputs="concatenated string:121.out" />
+        <Node _name="Property Node" fields="write+Value" link="输入临时值" type="{LV.String}" inputs="Value:121.out" uid="122" uid_parent="116" outputs="error out:122.error" />
+        <Node _name="Concatenate Strings" inputs="string:120.value,string#1:118.text" uid="123" uid_parent="116" outputs="concatenated string:123.out" />
+        <Node _name="Property Node" fields="write+Value" link="过程显示" type="{LV.String}" inputs="Value:123.out" uid="124" uid_parent="116" outputs="error out:124.error" />
+        <Control _name="数字1" type="bool" style="latched" value="false" outputs="value:" uid="125" uid_parent="116" />
+        <Control _name="数字2" type="bool" style="latched" value="false" outputs="value:" uid="126" uid_parent="116" />
+        <Control _name="数字3" type="bool" style="latched" value="false" outputs="value:" uid="127" uid_parent="116" />
+        <Control _name="数字4" type="bool" style="latched" value="false" outputs="value:" uid="128" uid_parent="116" />
+        <Control _name="数字5" type="bool" style="latched" value="false" outputs="value:" uid="129" uid_parent="116" />
+        <Control _name="数字6" type="bool" style="latched" value="false" outputs="value:" uid="130" uid_parent="116" />
+        <Control _name="数字7" type="bool" style="latched" value="false" outputs="value:" uid="131" uid_parent="116" />
+        <Control _name="数字8" type="bool" style="latched" value="false" outputs="value:" uid="132" uid_parent="116" />
+        <Control _name="数字9" type="bool" style="latched" value="false" outputs="value:" uid="133" uid_parent="116" />
+        <Control _name="数字0" type="bool" style="latched" value="false" outputs="value:" uid="134" uid_parent="116" />
+        <Control _name="小数点" type="bool" style="latched" value="false" outputs="value:" uid="135" uid_parent="116" />
+      </CaseFrame>
+      <CaseFrame selector=" &quot;加&quot;, &quot;减&quot;, &quot;乘&quot;, &quot;除&quot;\3A Value Change " uid="136" uid_parent="114">
+        <Structure _name="Flat Sequence Frame" uid="137" uid_parent="136">
+          <Diagram label="保存输入1" uid="138" uid_parent="137">
+            <Node _name="Property Node" fields="read+Value" link="输入临时值" type="{LV.String}" uid="139" uid_parent="138" outputs="Value:139.value,error out:139.error" />
+            <Node _name="Property Node" fields="write+Value" link="输入1" type="{LV.String}" inputs="Value:139.value" uid="140" uid_parent="138" outputs="error out:140.error" />
+          </Diagram>
+          <Diagram label="清空输入临时值" uid="141" uid_parent="137">
+            <Constant type="string" value="" uid="142" uid_parent="141" outputs="value:142.value" />
+            <Node _name="Property Node" fields="write+Value" link="输入临时值" type="{LV.String}" inputs="Value:142.value" uid="143" uid_parent="141" outputs="error out:143.error" />
+          </Diagram>
+        </Structure>
+        <Node _name="Event Data Node" fields="CtlRef" uid="144" uid_parent="136" outputs="CtlRef:144.CtlRef" />
+        <Node _name="Property Node" fields="read+Boolean Text.Text" type="{LV.Boolean}" inputs="reference:144.CtlRef" uid="145" uid_parent="136" outputs="Boolean Text.Text:145.text" />
+        <Node _name="Property Node" fields="write+Value" link="运算符临时值" type="{LV.String}" inputs="Value:145.text" uid="146" uid_parent="136" outputs="error out:146.error" />
+        <Node _name="Property Node" fields="read+Value" link="过程显示" type="{LV.String}" uid="147" uid_parent="136" outputs="Value:147.value,error out:147.error" />
+        <Node _name="Concatenate Strings" inputs="string:147.value,string#1:145.text" uid="148" uid_parent="136" outputs="concatenated string:148.out" />
+        <Node _name="Property Node" fields="write+Value" link="过程显示" type="{LV.String}" inputs="Value:148.out" uid="149" uid_parent="136" outputs="error out:149.error" />
+        <Control _name="加" type="bool" style="latched" value="false" outputs="value:" uid="150" uid_parent="136" />
+        <Control _name="减" type="bool" style="latched" value="false" outputs="value:" uid="151" uid_parent="136" />
+        <Control _name="乘" type="bool" style="latched" value="false" outputs="value:" uid="152" uid_parent="136" />
+        <Control _name="除" type="bool" style="latched" value="false" outputs="value:" uid="153" uid_parent="136" />
+      </CaseFrame>
+      <CaseFrame selector=" &quot;等于&quot;\3A Value Change " uid="154" uid_parent="114">
+        <Control _name="等于" type="bool" style="latched" value="false" outputs="value:" uid="155" uid_parent="154" />
+        <Node _name="Property Node" fields="read+Value" link="输入临时值" type="{LV.String}" uid="156" uid_parent="154" outputs="Value:156.value,error out:156.error" />
+        <Node _name="Property Node" fields="write+Value" link="输入2" type="{LV.String}" inputs="Value:156.value" uid="157" uid_parent="154" outputs="error out:157.error" />
+        <Node _name="Property Node" fields="read+Value" link="输入2" type="{LV.String}" inputs="error in (no error):157.error" uid="158" uid_parent="154" outputs="Value:158.value,error out:158.error" />
+        <Node _name="Property Node" fields="read+Value" link="输入1" type="{LV.String}" inputs="error in (no error):157.error" uid="159" uid_parent="154" outputs="Value:159.value,error out:159.error" />
+        <Node _name="Property Node" fields="read+Value" link="运算符临时值" type="{LV.String}" inputs="error in (no error):157.error" uid="160" uid_parent="154" outputs="Value:160.value,error out:160.error" />
+        <Node _name="Fract/Exp String To Number" inputs="string:159.value" uid="161" uid_parent="154" outputs="number:161.out" />
+        <Node _name="Fract/Exp String To Number" inputs="string:158.value" uid="162" uid_parent="154" outputs="number:162.out" />
+        <Structure _name="Case Structure" selectin="160.value" uid="163" uid_parent="154">
+          <Tunnel _id="In1" uid="164" uid_parent="163" inputs="value:161.out" />
+          <Tunnel _id="In2" uid="165" uid_parent="163" inputs="value:162.out" />
+          <Tunnel _id="Out1" uid="166" uid_parent="163" outputs="value:166.value" />
+          <CaseFrame selector="&quot;+&quot;\2C Default" uid="167" uid_parent="163">
+            <Tunnel _id="In1" uid="168" uid_parent="167" outputs="value:168.value" />
+            <Tunnel _id="In2" uid="169" uid_parent="167" outputs="value:169.value" />
+            <Node _name="Add" inputs="x:168.value,y:169.value" uid="170" uid_parent="167" outputs="x+y:170.out" />
+            <Tunnel _id="Out1" uid="171" uid_parent="167" inputs="value:170.out" />
+          </CaseFrame>
+          <CaseFrame selector="&quot;-&quot;" uid="172" uid_parent="163">
+            <Tunnel _id="In1" uid="173" uid_parent="172" outputs="value:173.value" />
+            <Tunnel _id="In2" uid="174" uid_parent="172" outputs="value:174.value" />
+            <Node _name="Subtract" inputs="x:173.value,y:174.value" uid="175" uid_parent="172" outputs="x-y:175.out" />
+            <Tunnel _id="Out1" uid="176" uid_parent="172" inputs="value:175.out" />
+          </CaseFrame>
+          <CaseFrame selector="&quot;*&quot;" uid="177" uid_parent="163">
+            <Tunnel _id="In1" uid="178" uid_parent="177" outputs="value:178.value" />
+            <Tunnel _id="In2" uid="179" uid_parent="177" outputs="value:179.value" />
+            <Node _name="Multiply" inputs="x:178.value,y:179.value" uid="180" uid_parent="177" outputs="x*y:180.out" />
+            <Tunnel _id="Out1" uid="181" uid_parent="177" inputs="value:180.out" />
+          </CaseFrame>
+          <CaseFrame selector="&quot;/&quot;" uid="182" uid_parent="163">
+            <Tunnel _id="In1" uid="183" uid_parent="182" outputs="value:183.value" />
+            <Tunnel _id="In2" uid="184" uid_parent="182" outputs="value:184.value" />
+            <Node _name="Divide" inputs="x:183.value,y:184.value" uid="185" uid_parent="182" outputs="x/y:185.out" />
+            <Tunnel _id="Out1" uid="186" uid_parent="182" inputs="value:185.out" />
+          </CaseFrame>
+        </Structure>
+        <Node _name="Number To Fractional String" inputs="number:166.value" uid="187" uid_parent="154" outputs="F-format string:187.out" />
+        <Node _name="Property Node" fields="write+Value" link="运算结果" type="{LV.String}" inputs="Value:187.out" uid="188" uid_parent="154" outputs="error out:188.error" />
+        <Node _name="Property Node" fields="read+Value" link="过程显示" type="{LV.String}" uid="189" uid_parent="154" outputs="Value:189.value,error out:189.error" />
+        <Constant type="string" value="=" uid="190" uid_parent="154" outputs="value:190.value" />
+        <Constant type="string" value="\0A" uid="191" uid_parent="154" outputs="value:191.value" />
+        <Node _name="Concatenate Strings" inputs="string:189.value,string#1:190.value,string#2:191.value,string#3:187.out" uid="192" uid_parent="154" outputs="concatenated string:192.out" />
+        <Node _name="Property Node" fields="write+Value" link="过程显示" type="{LV.String}" inputs="Value:192.out" uid="193" uid_parent="154" outputs="error out:193.error" />
+      </CaseFrame>
+      <CaseFrame selector=" &quot;清除&quot;\3A Value Change " uid="194" uid_parent="114">
+        <Control _name="清除" type="bool" style="latched" value="false" outputs="value:" uid="195" uid_parent="194" />
+        <Constant type="string" value="" uid="196" uid_parent="194" outputs="value:196.value" />
+        <Node _name="Property Node" fields="write+Value" link="过程显示" type="{LV.String}" inputs="Value:196.value" uid="197" uid_parent="194" outputs="error out:197.error" />
+        <Constant type="string" value="" uid="198" uid_parent="194" outputs="value:198.value" />
+        <Node _name="Property Node" fields="write+Value" link="输入临时值" type="{LV.String}" inputs="Value:198.value" uid="199" uid_parent="194" outputs="error out:199.error" />
+        <Constant type="string" value="" uid="200" uid_parent="194" outputs="value:200.value" />
+        <Node _name="Property Node" fields="write+Value" link="输入1" type="{LV.String}" inputs="Value:200.value" uid="201" uid_parent="194" outputs="error out:201.error" />
+        <Constant type="string" value="" uid="202" uid_parent="194" outputs="value:202.value" />
+        <Node _name="Property Node" fields="write+Value" link="输入2" type="{LV.String}" inputs="Value:202.value" uid="203" uid_parent="194" outputs="error out:203.error" />
+        <Constant type="string" value="" uid="204" uid_parent="194" outputs="value:204.value" />
+        <Node _name="Property Node" fields="write+Value" link="运算符临时值" type="{LV.String}" inputs="Value:204.value" uid="205" uid_parent="194" outputs="error out:205.error" />
+        <Constant type="string" value="" uid="206" uid_parent="194" outputs="value:206.value" />
+        <Node _name="Property Node" fields="write+Value" link="运算结果" type="{LV.String}" inputs="Value:206.value" uid="207" uid_parent="194" outputs="error out:207.error" />
+      </CaseFrame>
+    </Structure>
+    <Constant type="bool" value="false" uid="208" uid_parent="113" outputs="value:208.value" />
+    <Condition inputs="value:208.value" value="stop" uid="209" uid_parent="113" />
+  </Structure>
+</VI>

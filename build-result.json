@@ -1,0 +1,28 @@
+{
+  "started": "2026-10-24T14:55:58",
+  "finished": "2026-10-24T14:56:00",
+  "project": "虚拟计算器.lvproj",
+  "error": [
+    false,
+    0,
+    ""
+  ],
+  "generated_files": [
+    "builds/虚拟计算器/虚拟计算器.exe",
+    "builds/虚拟计算器/虚拟计算器.aliases",
+    "builds/虚拟计算器/虚拟计算器.ini"
+  ],
+  "post_build_runtime_configuration": {
+    "ini": "builds/虚拟计算器/虚拟计算器.ini",
+    "settings": {
+      "server.app.propertiesEnabled": "False",
+      "server.ole.enabled": "False",
+      "server.tcp.enabled": "False",
+      "server.vi.callsEnabled": "False",
+      "server.vi.propertiesEnabled": "False",
+      "WebServer.Enabled": "False"
+    },
+    "readback_verified": true
+  },
+  "publication_note": "Published copy: local absolute paths were made repository-relative; original build timestamps and results are unchanged."
+}
